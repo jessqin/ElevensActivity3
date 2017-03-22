@@ -1,3 +1,4 @@
+package com.company;
 /**
  * This class provides a convenient way to test shuffling methods.
  */
@@ -51,6 +52,21 @@ public class Shuffler {
 	 */
 	public static void perfectShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+
+		int k = 0;
+
+		int [] shuffled = new int[values.length];
+		for (int j = 0; j < (values.length + 1)/2; j++)
+		{
+			shuffled[k] = values[j];
+			k = k + 2;
+		}
+		k = 1;
+		for (int j = (values.length+1)/2; j < values.length + 1; j++)
+		{
+			shuffled [k] = values[j];
+			k = k + 2;
+		}
 	}
 
 	/**
